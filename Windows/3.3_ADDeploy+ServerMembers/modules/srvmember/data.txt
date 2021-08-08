@@ -1,0 +1,14 @@
+<powershell>
+net user '${NewAdminUser}' '${NewAdminPass}'
+winrm quickconfig -q
+winrm set winrm/config/winrs '@{MaxMemoryPerShellMB="300"}'
+winrm set winrm/config '@{MaxTimeoutms="1800000"}'
+winrm set winrm/config/service '@{AllowUnencrypted="true"}'
+winrm set winrm/config/service/auth '@{Basic="true"}'
+net stop winrm
+sc.exe config winrm start=auto
+net start winrm
+net start winrm
+Invoke-Webrequest https://bit.ly/2mHHRMr -Outfile  ApplyPolice.ps1  
+.\ApplyPolice.ps1
+</powershell>

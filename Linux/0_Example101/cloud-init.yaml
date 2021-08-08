@@ -1,0 +1,28 @@
+#cloud-config
+user: root
+password: Y0urP4$$w0rdH3r3
+chpasswd:
+  expire: False
+ssh_pwauth: True
+disable_root: false
+
+package_upgrade: true
+
+timezone: America/Sao_Paulo
+
+packages:
+  - epel-release
+
+ntp:
+  enabled: true
+  ntp_client: ntpdate
+  servers:
+    - pool.ntp.br
+    - a.ntp.br
+    - b.ntp.br
+    - c.ntp.br
+
+power_state:
+  mode: reboot
+  message: Kernel Update
+  timeout: 60

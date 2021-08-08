@@ -1,0 +1,7 @@
+#cloud-config
+write_files:
+  encoding: b64
+  content: NDI=
+  path: C:\test.txt
+  permissions: '0644'
+set_hostname: New-VmNAME

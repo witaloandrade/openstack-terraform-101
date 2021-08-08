@@ -1,0 +1,14 @@
+#variable "namesrv" {}
+variable "contador" {}
+variable "flavorsrv" {}
+variable "keysrv" {}
+variable "sgsrv" {}
+variable "netsrv" {}
+variable "net_ext" {}
+variable "snapid" {}
+variable "ADAdminUser" {}
+variable "ADAdminPass" {}
+variable "ADDomainName" {}
+variable "ipad" {}
+variable "tenant" {}
+variable "id" {}
